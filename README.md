@@ -62,7 +62,7 @@ This project uses **Apache Maven** to manage dependencies and build the applicat
     ```
 2.  **Compile and package the application using Maven:**
     ```bash
-    mvn clean package
+    mvn clean package -DskipTests
     ```
     This will create an executable `.jar` file in the `target/` directory.
 
@@ -70,4 +70,4 @@ This project uses **Apache Maven** to manage dependencies and build the applicat
 
 After building, you can run the game with the following command:
 ```bash
-java -jar target/classes/com/Main/Launcher.jar
+java -jar target/feed-the-snake-1.0.0.jar
