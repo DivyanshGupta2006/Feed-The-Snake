@@ -161,7 +161,6 @@ public class UI {
         g2d.setFont(new Font("Arial", Font.BOLD,16));
         g2d.setColor(new Color(164,8,0));
         g2d.drawString("For Restart, Press SPACE", g.screenWidth - 200, g.tileSize);
-        g2d.drawString("For Recording of previous game, Press R", g.screenWidth - 318, g.tileSize*2);
         g2d.drawString("Score : "+ g.score,g.tileSize-15,g.tileSize);
         g2d.drawString("FPS : "+ g.FPS,g.tileSize-15,g.tileSize*2);
         g2d.drawString("For Main menu, Press BACKSPACE",  g.screenWidth-275, g.screenHeight-g.tileSize+10);
