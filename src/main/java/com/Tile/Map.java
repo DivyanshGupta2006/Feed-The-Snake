@@ -1,6 +1,6 @@
 package com.Tile;
 
-import Main.gamePanel;
+import com.Main.gamePanel;
 
 public class Map {
 

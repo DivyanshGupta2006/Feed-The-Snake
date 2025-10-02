@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
-import Main.gamePanel;
+import com.Main.gamePanel;
 
 public class TileClass {
 

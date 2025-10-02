@@ -1,7 +1,7 @@
 package com.Main;
 
-import Entity.EntityClass;
-import Tile.Map;
+import com.Entity.EntityClass;
+import com.Tile.Map;
 
 public class collisionChecker {
 

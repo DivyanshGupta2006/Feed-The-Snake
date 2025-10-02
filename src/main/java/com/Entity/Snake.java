@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 
-import AI.*;
-import Main.gamePanel;
+import com.AI.*;
+import com.Main.gamePanel;
 
 public class Snake extends EntityClass {
 

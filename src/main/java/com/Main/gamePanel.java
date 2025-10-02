@@ -8,15 +8,14 @@ import java.awt.Graphics2D;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
-import Tile.*;
 import java.util.Random;
 import javax.swing.JPanel;
 
-import AI.*;
-import Entity.*;
-import Input.KeyHandler;
-import Recording.Recorder;
-import Settings.Config;
+import com.AI.*;
+import com.Entity.*;
+import com.Tile.*;
+import com.Input.*;
+import com.Settings.*;
 
 public class gamePanel extends JPanel implements Runnable {
 
@@ -58,7 +57,6 @@ public class gamePanel extends JPanel implements Runnable {
     public collisionChecker cC=new collisionChecker(this);
     public Config config = new Config(this);
     public PathFinder_01 pF = new PathFinder_01(this);
-    public Recorder rec = new Recorder(this);
 
     //Game-elements
     public Snake s= new Snake(this);
@@ -127,9 +125,6 @@ public class gamePanel extends JPanel implements Runnable {
 
     public void update() {
         if(gameState==fState || gameState==eState || gameState==autoState) {
-            if(showingRec==false) {
-                rec.addRecord();
-            }
             //Checking for eating of *food*
             if(cC.collision(s.snakeHead,food)) {
                 s.snakeBody.add(new EntityClass(this));
@@ -161,14 +156,6 @@ public class gamePanel extends JPanel implements Runnable {
                         pF.search();
                         s.followPath(pF.pathList);
                     }
-                }
-            }
-            if(showingRec){
-                if(rec.records.size()>0) {
-                    s.snakeHead.col=rec.records.get(0).snakeHeadCol;
-                    s.snakeHead.row=rec.records.get(0).snakeHeadRow;
-                    food.col=rec.records.get(0).foodCol;
-                    food.row=rec.records.get(0).foodRow;
                 }
             }
 
@@ -217,15 +204,6 @@ public class gamePanel extends JPanel implements Runnable {
                     s.snakeHead.row=((screenHeight/tileSize)-1);
                 }
             }
-
-            if(showingRec){
-                if(rec.records.size()>0) {
-                    s.snakeHead.col=rec.records.get(0).snakeHeadCol;
-                    s.snakeHead.row=rec.records.get(0).snakeHeadRow;
-                    food.col=rec.records.get(0).foodCol;
-                    food.row=rec.records.get(0).foodRow;
-                }
-            }
             //For initial invincibility
             if(initial==true) {
                 if(s.snakeHead.col>=10||s.snakeHead.row>=10) {
@@ -268,7 +246,6 @@ public class gamePanel extends JPanel implements Runnable {
         showingRec=false;
         s.velocityx=0;
         s.velocityy=1;
-        rec.newRecord();
         s.snakeHead.col=5;
         s.snakeHead.row=5;
         food.placeFood();

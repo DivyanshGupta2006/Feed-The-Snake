@@ -2,7 +2,7 @@ package com.AI;
 
 import java.util.ArrayList;
 
-import Main.gamePanel;
+import com.Main.gamePanel;
 
 public class PathFinder_01 {
 

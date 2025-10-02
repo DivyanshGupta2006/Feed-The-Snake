@@ -1,6 +1,6 @@
 package com.Entity;
 
-import Main.gamePanel;
+import com.Main.gamePanel;
 
 public class EntityClass {
 

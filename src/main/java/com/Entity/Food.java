@@ -6,7 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import Main.gamePanel;
+import com.Main.gamePanel;
 
 public class Food extends EntityClass {
 
