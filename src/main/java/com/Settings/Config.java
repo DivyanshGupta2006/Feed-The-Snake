@@ -17,7 +17,7 @@ public class Config {
     }
     public void saveConfig() {
         try {
-            BufferedWriter bw= new BufferedWriter(new FileWriter("src/Settings/config.txt"));
+            BufferedWriter bw= new BufferedWriter(new FileWriter("src/main/java/com/Settings/config.txt"));
 
             //Full Screen
             if(g.fullScreenOn==true) {
@@ -41,7 +41,7 @@ public class Config {
     public void loadConfig() {
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader("src/Settings/config.txt"));
+            BufferedReader br = new BufferedReader(new FileReader("src/main/java/com/Settings/config.txt"));
 
             try {
                 String s= br.readLine();

@@ -25,7 +25,7 @@ public class Food extends EntityClass {
 
     public void setImage() {
         try {
-            app=ImageIO.read(getClass().getResourceAsStream("/res_food/Apple.png"));
+            app=ImageIO.read(getClass().getResourceAsStream("/res/res_food/Apple.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }

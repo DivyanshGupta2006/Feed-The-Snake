@@ -39,11 +39,11 @@ public class Snake extends EntityClass {
     }
     public void setImages() {
         try {
-            snakeHUp=ImageIO.read(getClass().getResourceAsStream("/res_snake/SnakeHeadUp.png"));
-            snakeHDown=ImageIO.read(getClass().getResourceAsStream("/res_snake/SnakeHeadDown.png"));
-            snakeHLeft=ImageIO.read(getClass().getResourceAsStream("/res_snake/SnakeHeadLeft.png"));
-            snakeHRight=ImageIO.read(getClass().getResourceAsStream("/res_snake/SnakeHeadRight.png"));
-            snakeBod=ImageIO.read(getClass().getResourceAsStream("/res_snake/SnakeBody.png"));
+            snakeHUp=ImageIO.read(getClass().getResourceAsStream("/res/res_snake/SnakeHeadUp.png"));
+            snakeHDown=ImageIO.read(getClass().getResourceAsStream("/res/res_snake/SnakeHeadDown.png"));
+            snakeHLeft=ImageIO.read(getClass().getResourceAsStream("/res/res_snake/SnakeHeadLeft.png"));
+            snakeHRight=ImageIO.read(getClass().getResourceAsStream("/res/res_snake/SnakeHeadRight.png"));
+            snakeBod=ImageIO.read(getClass().getResourceAsStream("/res/res_snake/SnakeBody.png"));
         } catch (IOException e) {
             e.printStackTrace();
         }
